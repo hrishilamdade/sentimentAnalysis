@@ -5,6 +5,7 @@ from django.views.static import serve
 from django.conf.urls import url
 urlpatterns = [
     path('sentiment-analyser',views.home,name="index"),
+    path('',views.home,name="index"),
     path('mention',views.mention,name="mention"),
     path('response',views.response,name="response"),
     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
