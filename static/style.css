@@ -1,0 +1,199 @@
+body{
+    margin: 0px;
+    font-family: 'Lato';
+    color: rgb(22, 21, 21);
+    /* background-image: linear-gradient(129deg,rgb(140, 18, 221)40%,rgb(116, 50, 221)); */
+    background-size: 100%;
+    background-color: rgb(199, 199, 198);
+}
+.header{
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    float: left;
+    background-image: linear-gradient(110deg,rgb(166, 85, 231)60%,rgb(130, 141, 238)60%);
+}
+.heading{
+    margin-top: 0px;
+    padding: 5px;
+    /* text-shadow: 3px 3px 8px black; */
+    color: rgb(255, 255, 255);
+}
+.sent-anyl{
+    position: fixed;
+    right: 5px;
+    top:5px;
+    left: 900px;
+    text-decoration: none;
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+}
+.bot-activity{
+    position: fixed;
+    right: 10px;
+    top:5px;
+    left: 1080px;
+    text-decoration: none;
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    height: inherit;
+    width: inherit;
+}
+.sent-anyl a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    height: inherit;
+    width: inherit;
+}
+.container{
+    margin-top: 50px;
+    display: flex;
+    float: left;
+}
+.form{
+    position: fixed;
+    margin: 50px;
+}
+.inp-txt{
+    text-overflow: ellipsis;
+    overflow: scroll;
+    white-space: nowrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    height:200px;
+    width: 500px;
+    text-overflow: ellipsis;
+    font-size: 26px;
+    box-shadow: 0px 0px 0px black;
+    border-radius: 18px;
+    border-color: rgb(172, 41, 233);
+    
+}
+button{
+    padding: 10px;
+    top: 380px;
+    left:470px;
+    position: fixed;
+    color: rgb(252, 252, 252);
+    font-size: large;
+    background-color: rgb(158, 85, 255);
+    border-radius: 20px;
+    border: none;
+    height: auto;
+    /* /background-image: linear-gradient(-90deg,rgb(146, 157, 255),rgb(184, 233, 255)); */
+    width: auto;
+    transition: 0.1s;
+}
+button:hover{
+    box-shadow: 4px 4px 10px rgb(57, 13, 99);
+    color: white;
+    background-color: rgb(127, 62, 212);
+    cursor: pointer;
+}
+.res{
+    padding:10px;
+    position: absolute;
+    right: 10px;
+    left: 600px;
+    margin: 45px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.res:hover{
+    box-shadow: none;
+}
+.ml{
+    margin: 12px;
+    /* background-image: linear-gradient(-90deg,rgb(37, 147, 175),rgb(0, 145, 113)); */
+    font-size: larger;
+    font-family: 'Lato','Georgia';
+    width:  auto;
+    height: auto ;
+    color: rgb(243, 243, 243);
+    padding: 5px;
+    transition: 0.2s;
+    border-radius: 8px;
+    background-image: linear-gradient(110deg,rgb(85, 112, 231)60%,rgb(121, 134, 253)60%);
+}
+.ml:hover{
+    box-shadow: 2px 4px 9px rgb(51, 50, 50);
+
+}
+.query{
+    /* top: 50px; */
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+.table{
+    position: absolute;
+    top:160px;
+    left: 30px;
+    padding: 10px;
+    color: white;
+}
+.caption{
+    font-size: 30px;
+    color: rgb(17, 17, 17);
+}
+.row{
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(131, 187, 204);
+    margin-right: 50px;
+}
+.row:hover{
+    box-shadow: 2px 2px 6px black;
+}
+.table-data{
+    margin: 0px;
+    padding: 5px;
+    color: white;
+}
+.t-heading{
+    background-color: rgb(76, 120, 150);
+}
+.footer{
+    position: fixed;
+    padding: 8px;
+    padding-bottom: 15px;
+    right: 0%;
+    bottom: 0;
+    left: 0%;
+    /* align-content: center;
+    text-align: center;
+    align-self: center; */
+    height: auto;
+    background-image: linear-gradient(90deg,rgb(132, 55, 163),rgb(116, 50, 221));
+    color:white;
+}
+.icon{
+    margin-top: 10px;
+    position: relative;
+    margin: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius:50% ;
+    box-shadow: 4px white;
+}
+.hover:hover{
+    transition: 0.4s;
+    opacity: 0.6 black;
+    box-shadow: 3px 1px 4px black;
+}
+.copy{
+    text-align: left;
+}
+.made{
+    position: fixed;
+    right: 4px;
+    bottom: 15px;
+}

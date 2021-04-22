@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyser</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body class="body">
+<div class="header">
+    <h1 class='heading'>Activity of The Bot</h1>
+    <button class="sent-anyl"><a href="sentiment-analyser">Sentiment Anayser</a></button>
+    <button class="bot-activity"><a href="response">Response Table➞</a></button>
+</div>
+<div > 
+    <form action="mention" method="post" class="query">
+    {% csrf_token %}
+        <label for="query">Search by:</label>
+        <select name="query" id="query">
+            <option value="sender">Sender</option>
+            <option value="polarity">Polarity</option>
+            <option value="subjectivity">Subjectivity</option>
+        </select>
+        <input name="val" type="text">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <table class="table">
+        <caption class="caption">Mentions Table</caption>
+        <tr class="t-heading">
+            <th class="table-heading">Mention ID</th>
+            <th class="table-heading">Tweet</th>
+            <th class="table-heading">Sender</th>
+            <th class="table-heading">Polarity</th>
+            <th class="table-heading">Subjectivity</th>
+        </tr>
+        {% for item in mention %}
+        <tr class="row"> 
+            <td class="table-data">{{ item.mid }}</td>
+            <td class="table-data">{{ item.text }}</td>
+            <td class="table-data">{{ item.sender }}</td>
+            <td class="table-data">{{ item.polarity }}</td>
+            <td class="table-data">{{item.subjectivity}}</td>
+        </tr>
+        {% endfor %}
+    </table><br><br>
+</div>
+</body>
+</html>

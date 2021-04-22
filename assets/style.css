@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(180deg, red, yellow);
+}
+input{
+    height:150px;
+    width: 300px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+button{
+    
+}

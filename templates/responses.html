@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyser</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body class="body">
+<div class="header">
+    <h1 class='heading'>Activity of The Bot</h1>
+    <button class="sent-anyl"><a href="sentiment-analyser">Sentiment Anayser</a></button>
+    <button class="bot-activity"><a href="mention">Mention Table➞</a></button>
+</div>
+<div>
+<form action="response" method="post" class="query">
+    {% csrf_token %}
+        <label for="query">Search by:</label>
+        <select name="query" id="query">
+            <option value="all">All</option>
+            <option value="is_liked">Liked</option>
+            <option value="is_retweet">Retweeted</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+<table class="table">
+    <caption class="caption">Responses Table</caption>
+    <tr class="t-heading">
+        <th class="table-heading">Response ID</th>
+        <th class="table-heading">Mention ID</th>
+        <th class="table-heading">Response</th>
+        <th class="table-heading">Is_liked</th>
+        <th class="table-heading">Is_retweet</th>
+    </tr>
+    {% for item in response %}
+    <tr class="row"> 
+         <td class="table-data">{{ item.rid }}</td>
+         <td class="table-data">{{ item.mid }}</td>
+         <td class="table-data">{{ item.text }}</td>
+         <td class="table-data">{{ item.is_liked }}</td>
+         <td class="table-data">{{item.is_rt}}</td>
+    </tr>
+       {% endfor %}
+</table>
+</div>
+</div>
+</body>
+</html>
