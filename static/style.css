@@ -6,9 +6,11 @@ body{
     margin: 0px;
     font-family: 'Lato';
     color: rgb(22, 21, 21);
+
     /* background-image: linear-gradient(90deg,rgb(255, 188, 205)50%,rgb(141, 222, 233)50%);  */
     background-size: 100%;
-    background-color: rgb(199, 199, 198);
+    /* background-color: rgb(199, 199, 198); */
+    background-image: url("At3.jpg") !important;
 }
 .header{
     position: fixed;
@@ -18,7 +20,7 @@ body{
     width: 100%;
     display: flex;
     float: left;
-    background-image: linear-gradient(110deg,rgb(166, 85, 231)60%,rgb(130, 141, 238)60%);
+    background-image: linear-gradient(110deg,rgb(115 77 212)60%,rgb(130 92 229)60%);
 } 
 .heading{
     margin-top: 0px;
@@ -67,7 +69,7 @@ a{
     background-size:100% ;
 }
 .form{
-    margin: 30px;
+    margin: 50px;
     position:relative;
 }
 .inp-txt{
@@ -91,7 +93,7 @@ button{
     top:20px;
     left: 425px;
     font-size: large;
-    background-color: rgb(158, 85, 255);
+    background-color: rgb(116, 41, 212);
     border-radius: 20px;
     border: none;
     height: auto;
@@ -102,7 +104,7 @@ button{
 button:hover{
     box-shadow: 4px 4px 10px rgb(57, 13, 99);
     color: white;
-    background-color: rgb(127, 62, 212);
+    background-color: rgb(119, 39, 223);
     cursor: pointer;
 }
 .res{
@@ -110,7 +112,7 @@ button:hover{
     position: inherit;
     right: 10px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-right: 10px;
     margin-bottom: 30px;
     margin-left: 30px;
@@ -129,14 +131,15 @@ button:hover{
     font-family: 'Lato','Georgia';
     width: auto;
     height: auto;
-    color: rgb(255 255 255);
+    color: rgb(255, 255, 255);
     padding: 5px;
     transition: 0.2s;
     border-radius: 8px;
-    background-image: linear-gradient(-1deg,rgb(116 50 221),rgb(97 116 228));
+    /* background-image: linear-gradient(-1deg,rgb(144, 113, 255),rgb(115, 143, 204)); */
+    background-color: rgb(144, 113, 255);
 }
 .ml:hover{
-    box-shadow: 1px 1px 9px rgb(136, 136, 136),1px 1px 9px rgb(136, 136, 136);
+    box-shadow: 1px 1px 9px rgb(47, 41, 78);
 
 }
 .query{
@@ -144,6 +147,7 @@ button:hover{
     position: absolute;
     right: 30px;
     top: 100px;
+    color: white;
 }
 .table{
     position: absolute;
@@ -156,7 +160,7 @@ button:hover{
 }
 .caption{
     font-size: 30px;
-    color: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
 }
 .row{
     color: white;
@@ -187,7 +191,8 @@ button:hover{
     /* align-content: center;
     text-align: center;
     align-self: center; */
-    background-image: linear-gradient(0deg,rgb(82, 24, 105),rgb(116, 50, 221));
+    /* background-image: linear-gradient(0deg,rgb(82, 24, 105),rgb(116, 50, 221)); */
+    background-color: rgb(131, 67, 214);
     color:white;
 }
 .icon{
