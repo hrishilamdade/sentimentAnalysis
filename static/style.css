@@ -2,7 +2,7 @@ body{
     margin: 0px;
     font-family: 'Lato';
     color: rgb(22, 21, 21);
-    /* background-image: linear-gradient(129deg,rgb(140, 18, 221)40%,rgb(116, 50, 221)); */
+    /* background-image: linear-gradient(90deg,rgb(255, 188, 205)50%,rgb(141, 222, 233)50%);  */
     background-size: 100%;
     background-color: rgb(199, 199, 198);
 }
@@ -79,7 +79,7 @@ a{
 }
 button{
     padding: 10px;
-    top: 380px;
+    top: 340px;
     left:470px;
     position: fixed;
     color: rgb(252, 252, 252);
@@ -121,10 +121,10 @@ button:hover{
     padding: 5px;
     transition: 0.2s;
     border-radius: 8px;
-    background-image: linear-gradient(110deg,rgb(85, 112, 231)60%,rgb(121, 134, 253)60%);
+    background-image: linear-gradient(110deg,rgb(132, 155, 255)60%,rgb(121, 134, 253)60%);
 }
 .ml:hover{
-    box-shadow: 2px 4px 9px rgb(51, 50, 50);
+    box-shadow: 1px 1px 9px rgb(136, 136, 136),1px 1px 9px rgb(136, 136, 136);
 
 }
 .query{
@@ -147,7 +147,7 @@ button:hover{
 .row{
     color: white;
     border-radius: 5px;
-    background-color: rgb(131, 187, 204);
+    background-color: rgb(142, 158, 247);
     margin-right: 50px;
 }
 .row:hover{
@@ -159,7 +159,7 @@ button:hover{
     color: white;
 }
 .t-heading{
-    background-color: rgb(76, 120, 150);
+    background-color: rgb(156, 94, 238);
 }
 .footer{
     position: fixed;

@@ -65,7 +65,8 @@ def mention(request):
             mention=Mentions.objects.filter(sender=value)
         elif(query=="polarity"):
             value=float(value)
-            mention=Mentions.objects.raw('SELECT * FROM Mentions WHERE polarity >= %f' %value)
+            q='SELECT * FROM Mentions WHERE polarity BETWEEN %f AND %f'%(value-0.05,value+0.05)
+            mention=Mentions.objects.raw(q)
         elif(query=="subjectivity"):
             value=float(value)
             mention=Mentions.objects.raw('SELECT * FROM Mentions WHERE subjectivity >= %f' %value)
