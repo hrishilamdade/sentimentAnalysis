@@ -1,6 +1,6 @@
 *{
     font-family: "Lato", "Georgia";
-    background-size: 100%;
+    background: size 100%;
 }
 body{
     margin: 0px;
@@ -74,6 +74,7 @@ a{
     position:relative;
     height:200px;
     width: 500px;
+    se
     padding: 5px;
     font-size: large;
     box-shadow: 0px 0px 0px black;
@@ -160,12 +161,11 @@ button:hover{
 }
 .row{
     color: white;
-    border-radius: 5px;
     background-color: rgb(142, 158, 247);
     margin-right: 50px;
 }
 .row:hover{
-    box-shadow: 2px 2px 6px black;
+    box-shadow: 0px 0px 6px rgb(124, 118, 118);
 }
 .table-data{
     margin: 0px;
@@ -179,7 +179,7 @@ button:hover{
     position:relative;
     padding: 8px;
     padding-bottom: 15px;
-    /* width: 98.7%; */
+    width: 100%;
     height: auto;
     margin-top:50px;
     margin-right: 0%;
