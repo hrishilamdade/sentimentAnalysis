@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sentiment Analyser</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    
-</head>
-<body class="body">
-<div class="header">
-    <h1 class='heading'>Sentiment Analysis Using Bot</h1>
-    <button class="bot-activity"><a href="mention">Bot Activity</a></button>
-</div>
-<div class="container">
-    <div class="main">
+{% extends 'base.html' %}
+{% block heading %}Sentiment Analysis Using Bot{% endblock heading %}
+{% block  header%}<button class="bot-activity"><a href="mention">Bot Activity</a></button>{% endblock header %}
+{% block content %}<div class="main">
         <div class='form'>
             <form action="sentiment-analyser" method='post'>
                 {% csrf_token %}
@@ -26,16 +14,4 @@
             <div class="ml"><b>Sentiment</b> : {{sentiment}}</div>
             <div class="ml"><b>Bot reply</b> : {{result}}</div>
         </div>
-    </div>
-    <footer class="footer">
-            {% load static %}
-            <a href="" class="icon"><img src="{% static '/images/facebook.png' %}" class="icon hover"></a>
-            <a href=""class="icon"><img src="{% static '/images/insta.png' %}" class="icon hover"></a>
-            <a href="" class="icon"><img src="{% static '/images/twitter.png' %}" class="icon hover"></a>
-            <a href="" class="icon"><img src="{% static '/images/yt.png' %}" class="icon hover"></a>
-        <div class="copy">&copy; Sentiment Analyser</div>
-        <div class="made">Made by : Parshav,Hrishikesh and Aman</div>
-    </footer>
-</div>
-</body>
-</html>
+    </div>{% endblock content %}
