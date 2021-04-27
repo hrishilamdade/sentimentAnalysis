@@ -1,5 +1,6 @@
 *{
     font-family: "Lato", "Georgia";
+    background-size: 100%;
 }
 body{
     margin: 0px;
@@ -12,15 +13,16 @@ body{
 .header{
     position: fixed;
     top: 0px;
+    height: 60px;
     z-index: 1;
     width: 100%;
     display: flex;
     float: left;
     background-image: linear-gradient(110deg,rgb(166, 85, 231)60%,rgb(130, 141, 238)60%);
-}
+} 
 .heading{
     margin-top: 0px;
-    padding: 5px;
+    padding: 3px;
     /* text-shadow: 3px 3px 8px black; */
     color: rgb(255, 255, 255);
 }
@@ -28,17 +30,17 @@ body{
     position: fixed;
     right: 5px;
     top:5px;
-    left: 900px;
+    left: 72%;
     text-decoration: none;
     height: auto;
     width: auto;
     color: rgb(255, 255, 255);
 }
 .bot-activity{
-    position: fixed;
+    position: absolute;
     right: 10px;
     top:5px;
-    left: 1080px;
+    left: 87%;
     text-decoration: none;
     height: auto;
     width: auto;
@@ -58,34 +60,36 @@ a{
 }
 .container{
     margin-top: 100px;
+}
+.main{
     display: flex;
-    float: left;
+    flex-direction: row;
+    background-size:100% ;
 }
 .form{
-    position: fixed;
-    margin: 50px;
+    margin: 30px;
+    position:relative;
 }
 .inp-txt{
-    text-overflow: ellipsis;
-    overflow: scroll;
-    white-space: nowrap;
-    word-wrap: break-word;
-    word-break: break-all;
+    position:relative;
     height:200px;
     width: 500px;
-    text-overflow: ellipsis;
-    font-size: 26px;
+    padding: 5px;
+    font-size: large;
     box-shadow: 0px 0px 0px black;
     border-radius: 18px;
+    scroll-behavior:smooth;
+    scroll-snap-type: none;
+    scroll-margin-block:inherit ;
     border-color: rgb(172, 41, 233);
     
 }
 button{
-    padding: 10px;
-    top: 390px;
-    left:470px;
-    position: fixed;
+    position: relative;
     color: rgb(252, 252, 252);
+    padding: 10px;
+    top:20px;
+    left: 425px;
     font-size: large;
     background-color: rgb(158, 85, 255);
     border-radius: 20px;
@@ -103,28 +107,33 @@ button:hover{
 }
 .res{
     padding:10px;
-    position: absolute;
+    position: inherit;
     right: 10px;
-    left: 600px;
-    margin: 45px;
-    margin-left: 40px;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 10px;
     margin-bottom: 30px;
+    margin-left: 30px;
 }
 .res:hover{
     box-shadow: none;
 }
 .ml{
+   
+    
     margin: 12px;
-    /* background-image: linear-gradient(-90deg,rgb(37, 147, 175),rgb(0, 145, 113)); */
-    font-size: larger;
+    /* background-image: linear-gradient(
+-90deg
+,rgb(37, 147, 175),rgb(0, 145, 113)); */
+    font-size: large;
     font-family: 'Lato','Georgia';
-    width:  auto;
-    height: auto ;
-    color: rgb(243, 243, 243);
+    width: auto;
+    height: auto;
+    color: rgb(255 255 255);
     padding: 5px;
     transition: 0.2s;
     border-radius: 8px;
-    background-image: linear-gradient(110deg,rgb(132, 155, 255)60%,rgb(121, 134, 253)60%);
+    background-image: linear-gradient(-1deg,rgb(116 50 221),rgb(97 116 228));
 }
 .ml:hover{
     box-shadow: 1px 1px 9px rgb(136, 136, 136),1px 1px 9px rgb(136, 136, 136);
@@ -140,8 +149,10 @@ button:hover{
     position: absolute;
     top:160px;
     left: 30px;
+    width: 90%;
+    right: 30px;
     padding: 10px;
-    color: white;
+    color: white;margin: 20px;
 }
 .caption{
     font-size: 30px;
@@ -165,12 +176,15 @@ button:hover{
     background-color: rgb(156, 94, 238);
 }
 .footer{
-    position: fixed;
+    position:relative;
     padding: 8px;
     padding-bottom: 15px;
-    right: 0%;
-    bottom: 0;
-    left: 0%;
+    /* width: 98.7%; */
+    height: auto;
+    margin-top:50px;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    bottom: 0px;
     /* align-content: center;
     text-align: center;
     align-self: center; */
@@ -196,7 +210,7 @@ button:hover{
     text-align: left;
 }
 .made{
-    position: fixed;
-    right: 4px;
+    position: absolute;
+    right: 30px;
     bottom: 15px;
 }
