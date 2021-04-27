@@ -1,3 +1,6 @@
+*{
+    font-family: "Lato", "Georgia";
+}
 body{
     margin: 0px;
     font-family: 'Lato';
@@ -54,7 +57,7 @@ a{
     width: inherit;
 }
 .container{
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     float: left;
 }
@@ -79,7 +82,7 @@ a{
 }
 button{
     padding: 10px;
-    top: 340px;
+    top: 390px;
     left:470px;
     position: fixed;
     color: rgb(252, 252, 252);

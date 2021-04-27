@@ -55,6 +55,9 @@ def home(request):
     return render(request,'index.html',{'text':text,'result':reply,'polarity':prediction,'sentiment':sentiment})
 
 
+def bot(request):
+    return render(request,'bot.html')
+
 def mention(request):
     query=request.POST.get('query','')
     value=request.POST.get('val','')

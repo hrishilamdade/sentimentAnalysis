@@ -6,6 +6,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('sentiment-analyser',views.home,name="index"),
     path('',views.home,name="index"),
+    path('bot',views.bot,name="bot"),
     path('mention',views.mention,name="mention"),
     path('response',views.response,name="response"),
 ]
