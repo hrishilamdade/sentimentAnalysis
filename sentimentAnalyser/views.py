@@ -56,7 +56,18 @@ def home(request):
 
 
 def bot(request):
-    return render(request,'bot.html')
+    polarities=Mentions.objects.all().values('polarity')
+    print(polarities[0]['polarity'])
+    p,n,nl=0,0,0
+    for i in polarities:
+        if i['polarity'] >= 0.05:
+            p+=1
+        elif i['polarity'] <=-0.05:
+            n+=1
+        else:
+            nl+=1
+    dict={'Positive':p,"Negative":n,"Neutral":nl}
+    return render(request,'bot.html',dict)
 
 def mention(request):
     query=request.POST.get('query','')

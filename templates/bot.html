@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sentiment Analyser</title>
+{% extends 'base.html' %}
+{% block style %}
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- semantic UI -->
     <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
@@ -13,11 +9,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-</head>
-<body class="body">
-<div class="header">
-    <h1 class='heading'>Activity of The Bot</h1>
-</div>
-<div class="container">Bot name : MiniProject2233</div>
-</body>
-</html>
+    <link rel="stylesheet" type="text/css" href="{%static 'style-bot.css' %}">
+{% endblock style %}
+{% block scripts %}
+    <script>
+        $(document).ready(function(){
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ["Positive","Negative","Neutral"],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [{{Positive}},{{Negative}},{{Neutral}}],
+                        backgroundColor: [
+                            '',
+                            'rgb(255, 53, 53)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+                    });
+    </script>
+{% endblock scripts %}
+
+
+{% block heading %}<h1>Activity Of Bot</h1>{% endblock heading %}
+{% block header %}{% endblock header %}
+{% block content %}
+    <div class="graphs">
+        <div class="diag"><h3>Overall Sentiment</h3>
+        <canvas id="myChart" width="300" height="300"></canvas></div>
+        <div class="diag"><h3>Overall Subjectivity</h3></div> 
+    </div>
+{% endblock content %}
+

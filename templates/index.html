@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-{% block heading %}Sentiment Analysis Using Bot{% endblock heading %}
 {% block  header%}<button class="bot-activity"><a href="mention">Bot Activity</a></button>{% endblock header %}
-{% block content %}<div class="main">
+{% block  heading%}<div class="big-head"><p>Sentiment Analysis Using Bot</p></div>{% endblock heading %}
+{% block content %}
+    <div class="main">
         <div class='form'>
-            <form action="sentiment-analyser" method='post'>
+            <form id="form"action="#form" method='post'>
                 {% csrf_token %}
                 <textarea class="inp-txt" name='data'></textarea>
                 <button type='submit'>Analyse</button>

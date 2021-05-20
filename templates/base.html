@@ -4,15 +4,14 @@
     <title>Sentiment Analyser</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+    {% block style %}{% endblock style %}
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    
 </head>
 <body class="body">
 <div class="header">
-    <h1 class='heading'>{% block heading %}{% endblock heading %}</h1>
     {% block header %}{% endblock header %}
 </div>
-<div class="container">
+<h1 class='heading'>{% block heading %}{% endblock heading %}</h1>
     {% block content %}
     {% endblock content %}
     <footer class="footer">
@@ -24,6 +23,6 @@
         <div class="copy">&copy; Sentiment Analyser</div>
         <div class="made">Made by : Parshav,Hrishikesh and Aman</div>
     </footer>
-</div>
+{% block scripts %}{% endblock scripts %}
 </body>
 </html>
