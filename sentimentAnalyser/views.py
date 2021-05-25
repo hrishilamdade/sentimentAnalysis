@@ -57,17 +57,22 @@ def home(request):
 
 def bot(request):
     polarities=Mentions.objects.all().values('polarity')
-    print(polarities[0]['polarity'])
-    p,n,nl=0,0,0
+    p,n,nl,t=0,0,0,0
+    range=[]
     for i in polarities:
+        range.append(t)
+        t+=1
         if i['polarity'] >= 0.05:
             p+=1
         elif i['polarity'] <=-0.05:
             n+=1
         else:
             nl+=1
-    dict={'Positive':p,"Negative":n,"Neutral":nl}
-    return render(request,'bot.html',dict)
+    subjectivities=Mentions.objects.all().values('subjectivity')
+    subjectivities=[i['subjectivity'] for i in subjectivities]
+    dict1=[p,n,nl]
+    data={'polarity':dict1,'subjectivity':subjectivities,"range":range}
+    return render(request,'bot.html',data)
 
 def mention(request):
     query=request.POST.get('query','')

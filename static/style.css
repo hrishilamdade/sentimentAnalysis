@@ -15,30 +15,59 @@ body{
     background-color: rgb(231, 231, 229);
 }
 .header{
+    padding-left: 10px;
+    align-items: center;
     position: fixed;
     top: 0px;
     height: 60px;
     z-index: 1;
+    color: white;
     width: 100%;
+    font-size: large;
     display: flex;
     float: left;
-    /* background-image: linear-gradient(110deg,rgb(115 77 212)60%,rgb(130 92 229)60%); */
+    background-image: linear-gradient(110deg,rgb(115 77 212)60%,rgb(130 92 229)60%);
 } 
 .heading{
-    margin-top: 0px;
-    padding: 3px;
-    /* text-shadow: 3px 3px 8px black; */
-    color: rgb(255, 255, 255);
+    text-align: center;
 }
 .sent-anyl{
     position: fixed;
     right: 5px;
-    top:5px;
+    top: 5px;
     left: 72%;
     text-decoration: none;
     height: auto;
     width: auto;
     color: rgb(255, 255, 255);
+}
+.but{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    right: 0px;
+    margin: 5px;
+}
+.list-item{
+    margin: 3px;
+    list-style: none;
+    background-color: rgb(119, 16, 214);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+}
+.list-item:hover{
+    background-color: rgb(132, 0, 255);
+    box-shadow:0px 0px 9px  2px rgb(65, 3, 122);
+    color: white;
+}
+.list-item a{
+    text-decoration: none;
+    position: relative;
+    color: white;
+}
+.list-item a:hover{
+    color: white;
 }
 .bot-activity{
     position: absolute;
@@ -67,15 +96,16 @@ a{
 } */
 .big-head{
     background: 100%;
-    height: 100vh;
+    height: 105vh;
     color: white;
-    font-size: 50px;
+    font-size: 50px !important;
     text-align: center;
     
 }
 .big-head p{
     position: relative;
     top: 100px;
+    font-size: 50px;
 }
 .main{
     display: flex;
@@ -198,11 +228,11 @@ button:hover{
     position:relative;
     padding: 20px;
     padding-bottom: 15px;
-    width: 96.9%;
+    width: 96.5%;
     height: 100px;
     margin-top:50px;
-    margin-right: 0%;
-    margin-bottom: 0%;
+    margin-right: 0%!important;
+    margin-bottom: 0%!important;
     bottom: 0px;
     /* align-content: center;
     text-align: center;
