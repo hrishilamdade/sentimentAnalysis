@@ -60,6 +60,7 @@ body{
     background-color: rgb(132, 0, 255);
     box-shadow:0px 0px 9px  2px rgb(65, 3, 122);
     color: white;
+    cursor: pointer;
 }
 .list-item a{
     text-decoration: none;
@@ -85,18 +86,30 @@ a{
     height: inherit;
     width: inherit;
 }
-.sent-anyl a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    height: inherit;
-    width: inherit;
+.button{
+    color: rgb(252, 252, 252);
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;
+    background-color: rgb(137,88,255);
+    border-radius: 20px;
+    border: none;
+    height: auto;
+    /* /background-image: linear-gradient(-90deg,rgb(146, 157, 255),rgb(184, 233, 255)); */
+    width: auto;
+    transition: 0.1s;
+}
+.button:hover{
+    background-color: rgb(116, 41, 212);
+    box-shadow:0px 0px 20px  0px rgb(65, 3, 122);
+    color: white;
+    cursor: pointer;
 }
 /* .container{
     margin-top: 100px;
 } */
 .big-head{
     background: 100%;
-    height: 105vh;
+    height: 100vh;
     color: white;
     font-size: 50px !important;
     text-align: center;
@@ -113,7 +126,7 @@ a{
     background-size:100% ;
 }
 .form{
-    margin: 50px;
+    margin: 40px;
     position:relative;
 }
 .inp-txt{
@@ -121,7 +134,7 @@ a{
     height:200px;
     width: 500px;
     outline: rgb(38, 4, 54);
-    padding: 5px;
+    padding: 10px;
     font-size: large;
     box-shadow: 0px 0px 26px -8px black;
     border-radius: 18px;
@@ -132,7 +145,7 @@ a{
     border: 4px;
     
 }
-button{
+.analyse{
     position: relative;
     color: rgb(252, 252, 252);
     padding: 10px;

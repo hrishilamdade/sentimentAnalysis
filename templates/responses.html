@@ -5,6 +5,11 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        body{
+            background-repeat: repeat !important;
+        }
+    </style>
 </head>
 <body class="body">
 <div class="header">
@@ -24,7 +29,7 @@
             <option value="is_retweet">Retweeted</option>
         </select>
         <br><br>
-        <input type="submit" value="Submit">
+        <input class="button" type="submit" value="Submit">
     </form>
 <table class="table">
     <caption class="caption">Responses Table</caption>

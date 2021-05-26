@@ -74,6 +74,7 @@ def bot(request):
     data={'polarity':dict1,'subjectivity':subjectivities,"range":range}
     return render(request,'bot.html',data)
 
+
 def mention(request):
     query=request.POST.get('query','')
     value=request.POST.get('val','')
@@ -88,8 +89,15 @@ def mention(request):
             mention=Mentions.objects.raw(q)
         elif(query=="subjectivity"):
             value=float(value)
-            mention=Mentions.objects.raw('SELECT * FROM Mentions WHERE subjectivity >= %f' %value)
-    return render(request,'mentions.html',{'mention':mention})
+            mention=Mentions.objects.raw('SELECT * FROM Mentions WHERE subjectivity BETWEEN %f AND %f'%(value-0.05,value+0.05))
+    l=len(mention)
+    if(l>1):
+        s=str(l)+" rows selected"
+    else:
+        s=str(l)+" row selected"
+    return render(request,'mentions.html',{'mention':mention,'s':s})
+
+
 def response(request):
     query=request.POST.get('query','')
     response=Responses.objects.all()

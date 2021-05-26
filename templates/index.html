@@ -5,8 +5,8 @@
         <div class='form'>
             <form id="form"action="#form" method='post'>
                 {% csrf_token %}
-                <textarea class="inp-txt" name='data'></textarea>
-                <button type='submit'>Analyse</button>
+                <textarea class="inp-txt" name='data' placeholder="Enter text here..."></textarea>
+                <button class="analyse" type='submit'>Analyse</button>
             </form></div>
         <div class="res">
             <div class="ml"><b color="blue">Text</b> : {{text}}</div>
