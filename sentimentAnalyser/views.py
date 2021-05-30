@@ -32,16 +32,6 @@ def home(request):
         sentiment='-'
         prediction='-'
     else:
-        '''text=TextBlob(text)
-        prediction=text.sentiment.polarity
-        prediction=round(prediction,2)
-        reply=respond(prediction)[0]
-        if prediction<0:
-            sentiment='Negative'
-        elif prediction==0:
-            sentiment='Neutral'
-        else:
-            sentiment='Positive '''
         sentiment_obj=SentimentIntensityAnalyzer()
         sentiment_dict=sentiment_obj.polarity_scores(text)
         prediction=sentiment_dict['compound']
@@ -95,7 +85,7 @@ def mention(request):
         s=str(l)+" rows selected"
     else:
         s=str(l)+" row selected"
-    return render(request,'mentions.html',{'mention':mention,'s':s})
+    return render(request,'mentions.html',{'mention':mention,'s':s,'len':l})
 
 
 def response(request):
@@ -105,4 +95,9 @@ def response(request):
         response=Responses.objects.filter(is_liked=1)
     elif query=='is_retweet':
         response=Responses.objects.filter(is_rt=1)
-    return render(request,'responses.html',{'response':response})
+    l=len(response)
+    if(l>1):
+        s=str(l)+" rows selected"
+    else:
+        s=str(l)+" row selected"
+    return render(request,'responses.html',{'response':response,'s':s,'len':l})

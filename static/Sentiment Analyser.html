@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sentiment Analyser</title>
+    
+    <link rel="stylesheet" type="text/css" href="./Sentiment Analyser_files/style.css">
+    <link href="./Sentiment Analyser_files/css" rel="stylesheet" type="text/css">
+    <style>
+        body{
+            background-repeat: repeat !important;
+        }
+    </style>
+<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
+<body class="body">
+<div class="header">
+    <div><h1>Activity of The Bot</h1></div>
+    <ul class="but">
+        <li class="list-item"><a href="http://127.0.0.1:8000/sentiment-analyser">Sentiment Analyser</a></li>
+        <li class="list-item"><a href="http://127.0.0.1:8000/response">Response Table➞</a></li>
+    </ul>
+</div>
+<div> 
+    <form action="http://127.0.0.1:8000/mention" method="post" class="query">
+    <input type="hidden" name="csrfmiddlewaretoken" value="dneqW3EY1WGThDgmAyBnUSPGAIhhG56T9Kl96V9JCPJLQuERlcC1KPDUn1jjX4Od">
+        <label for="query">Search by:</label>
+        <select name="query" id="query">
+            <option value="sender">Sender</option>
+            <option value="polarity">Polarity</option>
+            <option value="subjectivity">Subjectivity</option>
+        </select>
+        <input name="val" type="text">
+        <br><br>
+        <input class="button" type="submit" value="Submit">
+    </form>
+    <p>20 rows selected</p><table class="table">
+        <caption class="caption">Mentions Table</caption>
+        <tbody><tr class="t-heading">
+            <th class="table-heading">Mention ID</th>
+            <th class="table-heading">Tweet</th>
+            <th class="table-heading">Sender</th>
+            <th class="table-heading">Polarity</th>
+            <th class="table-heading">Subjectivity</th>
+        </tr>
+        
+            
+            <tr class="row"> 
+                <td class="table-data">1367413251193991172</td>
+                <td class="table-data">Hi  </td>
+                <td class="table-data">Pg35740700</td>
+                <td class="table-data">0.0</td>
+                <td class="table-data">0.0</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1367363274547687428</td>
+                <td class="table-data"> MiniPro44233766 I feel lucky today </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.333333</td>
+                <td class="table-data">0.833333</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1367338952223461377</td>
+                <td class="table-data">Hii  </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.0</td>
+                <td class="table-data">0.0</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1367162255867961344</td>
+                <td class="table-data">Today is a great day!  </td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">1.0</td>
+                <td class="table-data">0.75</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1366629317183119364</td>
+                <td class="table-data"> Hello</td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">0.0</td>
+                <td class="table-data">0.0</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1372982763687571457</td>
+                <td class="table-data"> am very happy with the carwash service, my window looks pristine. Thank you!</td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">1.0</td>
+                <td class="table-data">1.0</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1373136942573883393</td>
+                <td class="table-data">The services you offered were best I have ever experienced. Thank you !  </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">1.0</td>
+                <td class="table-data">0.6</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1373130461648543744</td>
+                <td class="table-data">did not really like the iphone 12  </td>
+                <td class="table-data">Pg35740700</td>
+                <td class="table-data">0.2</td>
+                <td class="table-data">0.2</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1374614601245941761</td>
+                <td class="table-data"> hi, i hated the your services and will never use your products again. i find you obnoxious and you</td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">-0.9</td>
+                <td class="table-data">0.7</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1375188339322548227</td>
+                <td class="table-data"> aspeaksr hated your product. </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">-0.9</td>
+                <td class="table-data">0.7</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1375300010862997512</td>
+                <td class="table-data">its raining today. </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.0</td>
+                <td class="table-data">0.0</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1375302502195687429</td>
+                <td class="table-data"> i need help to overthrow government</td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.0</td>
+                <td class="table-data">0.0</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1375400804002111496</td>
+                <td class="table-data">you product is great. </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.8</td>
+                <td class="table-data">0.75</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1379429059164217354</td>
+                <td class="table-data"> your product works fine. the resolution is adequate.</td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">0.375</td>
+                <td class="table-data">0.416667</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1379428910589308929</td>
+                <td class="table-data"> i did not enjoy your product. the camera lens was poor.</td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">-0.3</td>
+                <td class="table-data">0.55</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1380179658889601026</td>
+                <td class="table-data">i am very happy with your services,  your delivery was right on time and product was correct.</td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">0.642857</td>
+                <td class="table-data">0.767857</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1380481909742915584</td>
+                <td class="table-data">im not at all happy with your service  the package was broken and completely unusable you have t </td>
+                <td class="table-data">AspeaksR</td>
+                <td class="table-data">0.166667</td>
+                <td class="table-data">0.6</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1380498156341796865</td>
+                <td class="table-data"> your product is not what i expected the delivery service was very poor</td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">-0.31</td>
+                <td class="table-data">0.59</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1395260676273152000</td>
+                <td class="table-data">thanks for fast and quality service</td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.2</td>
+                <td class="table-data">0.4</td>
+            </tr>
+            
+            <tr class="row"> 
+                <td class="table-data">1395324477823586305</td>
+                <td class="table-data">thanks for fast and quality service </td>
+                <td class="table-data">Hrishi72239127</td>
+                <td class="table-data">0.2</td>
+                <td class="table-data">0.4</td>
+            </tr>
+            
+        
+    
+    </tbody></table><br><br>
+</div>
+
+</body></html>

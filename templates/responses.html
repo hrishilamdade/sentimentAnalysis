@@ -40,6 +40,7 @@
         <th class="table-heading">Is_liked</th>
         <th class="table-heading">Is_retweet</th>
     </tr>
+    {% if len is not 0%}
     {% for item in response %}
     <tr class="row"> 
          <td class="table-data">{{ item.rid }}</td>
@@ -48,7 +49,12 @@
          <td class="table-data">{{ item.is_liked }}</td>
          <td class="table-data">{{item.is_rt}}</td>
     </tr>
-       {% endfor %}
+    {% endfor %}
+    {%endif%}
+    {% if len is 0%}
+        <tr class="row"><td colspan="5" class="table-data">No Results Found</td></tr>
+    {%endif%}
+    <tr><td colspan="5" style="font-size:12px">{{s}}</tr>
 </table>
 </div>
 </div>

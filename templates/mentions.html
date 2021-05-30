@@ -36,21 +36,26 @@
         <caption class="caption">Mentions Table</caption>
         <tr class="t-heading">
             <th class="table-heading">Mention ID</th>
-            <th class="table-heading">Tweet</th>
+            <th class="table-heading">Text</th>
             <th class="table-heading">Sender</th>
             <th class="table-heading">Polarity</th>
             <th class="table-heading">Subjectivity</th>
         </tr>
-        {% for item in mention %}
-        <tr class="row"> 
-            <td class="table-data">{{ item.mid }}</td>
-            <td class="table-data">{{ item.text }}</td>
-            <td class="table-data">{{ item.sender }}</td>
-            <td class="table-data">{{ item.polarity }}</td>
-            <td class="table-data">{{item.subjectivity}}</td>
-        </tr>
-        {% endfor %}
-    <p>{{s}}</p>
+        {% if len is not 0 %}
+            {% for item in mention %}
+            <tr class="row"> 
+                <td class="table-data">{{ item.mid }}</td>
+                <td class="table-data">{{ item.text }}</td>
+                <td class="table-data">{{ item.sender }}</td>
+                <td class="table-data">{{ item.polarity }}</td>
+                <td class="table-data">{{item.subjectivity}}</td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+        {% if len is 0%}
+            <tr class="row"><td colspan="5" class="table-data">No Results Found</td></tr>
+        {%endif%}
+        <tr><td colspan="5" style="font-size:12px">{{s}}</tr>
     </table><br><br>
 </div>
 </body>
