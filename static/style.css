@@ -5,8 +5,7 @@
 body{
     margin: 0px;
     font-family: 'Lato';
-    color: rgb(22, 21, 21);
-
+    color: rgb(31, 28, 28);
     /* background-image: linear-gradient(90deg,rgb(255, 188, 205)50%,rgb(141, 222, 233)50%);  */
     background-size: 100%;
     /* background-color: rgb(199, 199, 198); */
@@ -15,7 +14,7 @@ body{
     background-color: rgb(231, 231, 229);
 }
 .header{
-    padding-left: 10px;
+    padding-left: 20px;
     align-items: center;
     position: fixed;
     top: 0px;
@@ -51,10 +50,12 @@ body{
 .list-item{
     margin: 3px;
     list-style: none;
-    background-color: rgb(119, 16, 214);
+    line-height: 1.4285em;
+    /* background-color: rgb(119, 16, 214); */
     border-radius: 20px;
     padding: 10px;
     color: white;
+    transition: 0.2s;
 }
 .list-item:hover{
     background-color: rgb(132, 0, 255);
@@ -117,13 +118,65 @@ a{
 }
 .big-head p{
     position: relative;
-    top: 100px;
+    top: 220px;
     font-size: 50px;
 }
 .main{
     display: flex;
     flex-direction: row;
     background-size:100% ;
+}
+.contain{
+    color: rgb(255, 255, 255);
+    font-size: large;
+    margin: 80px;
+    margin-left: 50px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    background-size: unset;
+}
+
+.bot-image img{
+    position: relative;
+    right: 0px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: -7px 7px 9px 1px #5e5c5c38;
+}
+.flex{
+    background-size: 50%;
+    width: 70%;
+    height: 80px !important;
+    margin: 30px;
+    margin-top: 60px;
+    margin-right: 150px;
+    padding: 30px;
+    padding-left: 20px;
+    box-shadow: 0px 0px 9px 4px rgb(172, 172, 172);
+    background-color: rgb(141, 103, 248);
+    border-radius: 15px;
+    height: auto;
+}
+.working{
+    margin: 50px;
+    padding: 20px;
+    background-color: rgb(177, 196, 233);
+    border-radius: 16px;
+    box-shadow: 0px 0px 9px 2px rgb(197, 191, 191);
+}
+.working p{
+    padding: 40px;
+}
+.contact{
+    margin: 50px;
+    padding: 10px;
+    width: fit-content;
+    background-color: rgb(145 184 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 9px 2px rgb(197, 191, 191);
+    line-height: 4px;
 }
 .form{
     margin: 40px;
@@ -208,15 +261,20 @@ button:hover{
     top: 100px;
     color: white;
 }
+.error{
+    color: rgb(221, 148, 148);
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
 .table{
-    position: absolute;
-    top:160px;
-    left: 30px;
-    width: 90%;
-    right: 30px;
-    padding: 10px;
+    font-size: 16px;
+    position: relative;
+    top:120px;
+    /* right: 15px; */
+    width:100% !important;
     color: white;
-    margin: 20px;
+    margin: 15px;
 }
 .caption{
     font-size: 30px;
@@ -238,12 +296,18 @@ button:hover{
 }
 .t-heading{
     background-color: rgb(156, 94, 238);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.table-heading{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .footer{
     position:relative;
     padding: 20px;
     padding-bottom: 15px;
-    width: 96.5%;
+    width: 96.85%;
     height: 100px;
     margin-top:50px;
     margin-right: 0%!important;

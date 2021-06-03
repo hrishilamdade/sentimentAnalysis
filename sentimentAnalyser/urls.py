@@ -9,4 +9,5 @@ urlpatterns = [
     path('bot',views.bot,name="bot"),
     path('mention',views.mention,name="mention"),
     path('response',views.response,name="response"),
+    path('about',views.about,name="about"),
 ]

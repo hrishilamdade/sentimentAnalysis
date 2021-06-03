@@ -16,10 +16,13 @@
     <div><h1>Activity of The Bot</h1></div>
     <ul class="but">
         <li class="list-item"><a href="sentiment-analyser">Sentiment Analyser</a></li>
-        <li class="list-item"><a href="response">Response Table➞</a></li>
+        <li class="list-item"><a href="bot">Bot Page</a></li>
+        <li class="list-item"><a href="about">About</a></li>
+        <li class="list-item"><a href="response">Responses Table➞</a></li>
     </ul>
 </div>
-<div > 
+<div class="contain"> 
+    <div>
     <form action="mention" method="post" class="query">
     {% csrf_token %}
         <label for="query">Search by:</label>
@@ -29,9 +32,15 @@
             <option value="subjectivity">Subjectivity</option>
         </select>
         <input name="val" type="text">
-        <br><br>
+        <br>
+        {%if error is 1%}
+            <div class="error">*Please enter appropriate value</div>
+        {% endif %}
+        <br>
         <input class="button" type="submit" value="Submit">
     </form>
+    </div>
+    <div>
     <table class="table">
         <caption class="caption">Mentions Table</caption>
         <tr class="t-heading">
@@ -58,5 +67,6 @@
         <tr><td colspan="5" style="font-size:12px">{{s}}</tr>
     </table><br><br>
 </div>
+    
 </body>
 </html>

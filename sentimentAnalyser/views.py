@@ -73,19 +73,28 @@ def mention(request):
     else:
         if(query=="sender"):
             mention=Mentions.objects.filter(sender=value)
-        elif(query=="polarity"):
-            value=float(value)
-            q='SELECT * FROM Mentions WHERE polarity BETWEEN %f AND %f'%(value-0.05,value+0.05)
-            mention=Mentions.objects.raw(q)
-        elif(query=="subjectivity"):
-            value=float(value)
-            mention=Mentions.objects.raw('SELECT * FROM Mentions WHERE subjectivity BETWEEN %f AND %f'%(value-0.05,value+0.05))
+        else:
+            try:
+                value=float(value)
+            except:
+                mention=Mentions.objects.all()
+                l=len(mention)
+                if(l>1):
+                    s=str(l)+" rows selected"
+                else:
+                    s=str(l)+" row selected"
+                return render(request,"mentions.html",{"error":1,'mention':mention,'s':s,'len':l})
+            if(query=="polarity"):
+                q='SELECT * FROM Mentions WHERE polarity BETWEEN %f AND %f'%(value-0.05,value+0.05)
+                mention=Mentions.objects.raw(q)
+            elif(query=="subjectivity"):
+                mention=Mentions.objects.raw('SELECT * FROM Mentions WHERE subjectivity BETWEEN %f AND %f'%(value-0.05,value+0.05))
     l=len(mention)
     if(l>1):
         s=str(l)+" rows selected"
     else:
         s=str(l)+" row selected"
-    return render(request,'mentions.html',{'mention':mention,'s':s,'len':l})
+    return render(request,'mentions.html',{'error':0,'mention':mention,'s':s,'len':l})
 
 
 def response(request):
@@ -101,3 +110,6 @@ def response(request):
     else:
         s=str(l)+" row selected"
     return render(request,'responses.html',{'response':response,'s':s,'len':l})
+
+def about(request):
+    return render(request,'about.html')

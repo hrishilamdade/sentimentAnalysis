@@ -16,9 +16,12 @@
     <div><h1>Activity of The Bot</h1></div>
     <ul class="but">
         <li class="list-item"><a href="sentiment-analyser">Sentiment Analyser</a></li>
+        <li class="list-item"><a href="bot">Bot Page</a></li>
+        <li class="list-item"><a href="about">About</a></li>
         <li class="list-item"><a href="mention">Mention Table➞</a></li>
     </ul>
 </div>
+<div class="contain"> 
 <div>
 <form action="response" method="post" class="query">
     {% csrf_token %}
@@ -30,32 +33,35 @@
         </select>
         <br><br>
         <input class="button" type="submit" value="Submit">
-    </form>
-<table class="table">
-    <caption class="caption">Responses Table</caption>
-    <tr class="t-heading">
-        <th class="table-heading">Response ID</th>
-        <th class="table-heading">Mention ID</th>
-        <th class="table-heading">Response</th>
-        <th class="table-heading">Is_liked</th>
-        <th class="table-heading">Is_retweet</th>
-    </tr>
-    {% if len is not 0%}
-    {% for item in response %}
-    <tr class="row"> 
-         <td class="table-data">{{ item.rid }}</td>
-         <td class="table-data">{{ item.mid }}</td>
-         <td class="table-data">{{ item.text }}</td>
-         <td class="table-data">{{ item.is_liked }}</td>
-         <td class="table-data">{{item.is_rt}}</td>
-    </tr>
-    {% endfor %}
-    {%endif%}
-    {% if len is 0%}
-        <tr class="row"><td colspan="5" class="table-data">No Results Found</td></tr>
-    {%endif%}
-    <tr><td colspan="5" style="font-size:12px">{{s}}</tr>
-</table>
+    </form></div>
+    <div>
+    <table class="table">
+        <caption class="caption">Responses Table</caption>
+        <tr class="t-heading">
+            <th class="table-heading">Response ID</th>
+            <th class="table-heading">Mention ID</th>
+            <th class="table-heading">Response</th>
+            <th class="table-heading"> Liked</th>
+            <th class="table-heading">Retweeted</th>
+        </tr>
+        {% if len is not 0%}
+        {% for item in response %}
+        <tr class="row"> 
+            <td class="table-data">{{ item.rid }}</td>
+            <td class="table-data">{{ item.mid }}</td>
+            <td class="table-data">{{ item.text }}</td>
+            <td class="table-data">{%if item.is_liked is 1%}Yes{% endif %}
+                                    {%if item.is_liked is 0%}No{% endif %}</td>
+            <td class="table-data">{%if item.is_rt is 1%}Yes{% endif %}
+                                    {%if item.is_rt is 0%}No{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {%endif%}
+        {% if len is 0%}
+            <tr class="row"><td colspan="5" class="table-data">No Results Found</td></tr>
+        {%endif%}
+        <tr><td colspan="5" style="font-size:12px">{{s}}</tr>
+    </table>
 </div>
 </div>
 </body>

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block style %}
+    <style>
+        body{
+            background-image:none !important;
+        }
+    </style>
+
+{% endblock style %}
+{% block header %}<div><h1>About Us</h1></div>{% endblock header %}
+{% block content %}
+    <div class="contain">
+        <div class="flex">
+        Our aim is to develop a Twitter bot with automated responses and interactions with 
+        tweets based on text classification. Such bot could be used by a brand to optimize
+        their social media engagements.
+        </div>
+        {% load static %}
+        <div class="bot-image"><img src="{% static 'botimage.jpg' %}" alt="bot image"></div>
+    </div>
+    <div class="working"><h2>How our bot works?</h2><p>The twitter bot program source 
+    file connects with the API to stream all tweets which mentions the bot. The program 
+    then makes use of sentiment analysis tools in order
+    to help the bot classify the tweets as positive or negative or neutral. 
+     The bot can then interact with the tweet and produce some meaningful responses</p></div>
+    <div class="contact">
+        <h3>Contact Us</h3>
+        <p>Hrishikesh Lamdade-hrishikesh.lamdade@spit.ac.in</p>
+        <p>Aman Parikh-aman.parikh@spit.ac.in</p>
+        <p>Parshav Gandhi-parshav.gandhi@spit.ac.in</p>
+    </div>
+{% endblock content %}
